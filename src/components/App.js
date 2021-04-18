@@ -1,13 +1,13 @@
-import React from 'react';
-import MyImage from '../assets/image.jpeg';
+import React from "react";
+import MyImage from "../assets/image.jpeg";
 
 const App = () => {
-	return (
-		<div>
-			<h1>Welcome to my-webpack-react-starter</h1>
-			<img src={MyImage} />
-		</div>
-	);
+  return (
+    <div>
+      <h1>Welcome to my-webpack-react-starter</h1>
+      <img src={MyImage} />
+    </div>
+  );
 };
 
 export default App;
