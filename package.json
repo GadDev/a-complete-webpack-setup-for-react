@@ -60,9 +60,6 @@
     "*.{js,jsx,ts,tsx}": [
       "eslint --quiet --fix"
     ],
-    "*.{spec,test}.{js,jsx,ts,tsx}": [
-      "npm run test:lint-staged"
-    ],
     "*.{js,jsx,ts,tsx,md,html,css}": "prettier --write"
   }
 }
