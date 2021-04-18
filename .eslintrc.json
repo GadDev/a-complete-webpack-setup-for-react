@@ -1,10 +1,20 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "jest": true
   },
-  "jest/globals": true,
-  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "parser": "babel-eslint",
+  "extends": [
+    "eslint:recommended",
+    "plugin:jest-dom/recommended",
+    "plugin:prettier/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:testing-library/recommended",
+    "plugin:testing-library/react",
+    "react-app/jest"
+  ],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -12,6 +22,44 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react"],
-  "rules": {}
+  "plugins": ["react", "jsx-a11y", "simple-import-sort", "testing-library"],
+  "rules": {
+    "brace-style": "error",
+    "import/prefer-default-export": "off",
+    "jest-dom/prefer-checked": "error",
+    "jest-dom/prefer-enabled-disabled": "error",
+    "jest-dom/prefer-required": "error",
+    "jest-dom/prefer-to-have-attribute": "error",
+    "jsx-a11y/role-supports-aria-props": 0,
+    "jsx-a11y/control-has-associated-label": 0,
+    "jsx-a11y/aria-unsupported-elements": 0,
+    "no-var": "error",
+    "prettier/prettier": "error",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-curly-newline": "off",
+    "react-hooks/exhaustive-deps": "error",
+    "react/prop-types": ["off"],
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "space-before-blocks": "error",
+    "testing-library/await-async-query": "error",
+    "testing-library/no-await-sync-query": "error",
+    "testing-library/no-debug": "warn"
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/*.test.js",
+        "**/*.test.jsx",
+        "**/*.test.tsx",
+        "**/*.spec.js",
+        "**/*.spec.jsx",
+        "**/*.spec.tsx"
+      ],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
 }
