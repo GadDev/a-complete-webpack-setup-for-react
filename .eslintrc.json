@@ -13,6 +13,7 @@
     "plugin:react-hooks/recommended",
     "plugin:testing-library/dom",
     "plugin:testing-library/react",
+    "prettier",
     "react-app",
     "react-app/jest"
   ],
