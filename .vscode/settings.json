@@ -1,32 +1,33 @@
 {
-	"editor.fontSize": 16,
-	"files.autoSave": "afterDelay",
-	"editor.tabSize": 2,
-	"editor.wordWrap": "on",
-	"terminal.integrated.fontSize": 16,
-	"emmet.includeLanguages": {
-		"javascript": "javascriptreact"
-	},
-	"editor.codeActionsOnSave": { "source.fixAll.eslint": true },
-	"editor.minimap.enabled": false,
-	"javascript.updateImportsOnFileMove.enabled": "always",
-	"editor.formatOnPaste": true,
-	"editor.formatOnSave": true,
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"[javascript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"editor.cursorBlinking": "expand",
-	"window.zoomLevel": 1,
-	"indentRainbow.includedLanguages": [],
-	"indentRainbow.colors": [
-		"rgba(255,255,64,0.07)",
-		"rgba(127,255,127,0.07)",
-		"rgba(255,127,255,0.07)",
-		"rgba(79,236,236,0.07)"
-	],
-
-	// The indent color if the number of spaces is not a multiple of "tabSize".
-	"indentRainbow.errorColor": "rgba(128,32,32,0.6)",
-	"eslint.alwaysShowStatus": true
+  "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
+  "editor.cursorBlinking": "expand",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.fontSize": 16,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "eslint.alwaysShowStatus": true,
+  "eslint.validate": ["javascript"],
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+  "files.autoSave": "afterDelay",
+  "indentRainbow.colors": [
+    "rgba(255,255,64,0.07)",
+    "rgba(127,255,127,0.07)",
+    "rgba(255,127,255,0.07)",
+    "rgba(79,236,236,0.07)"
+  ],
+  // The indent color if the number of spaces is not a multiple of "tabSize".
+  "indentRainbow.errorColor": "rgba(128,32,32,0.6)",
+  "indentRainbow.includedLanguages": [],
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "terminal.integrated.fontSize": 16,
+  "window.zoomLevel": 1
 }
