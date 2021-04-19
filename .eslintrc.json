@@ -4,15 +4,16 @@
     "es2021": true,
     "jest": true
   },
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "extends": [
     "eslint:recommended",
     "plugin:jest-dom/recommended",
     "plugin:prettier/recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-    "plugin:testing-library/recommended",
+    "plugin:testing-library/dom",
     "plugin:testing-library/react",
+    "react-app",
     "react-app/jest"
   ],
   "parserOptions": {
@@ -22,7 +23,15 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "jsx-a11y", "simple-import-sort", "testing-library"],
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "simple-import-sort",
+    "import",
+    "testing-library",
+    "jest-dom",
+    "jest"
+  ],
   "rules": {
     "brace-style": "error",
     "import/prefer-default-export": "off",
@@ -42,6 +51,9 @@
     "react/prop-types": ["off"],
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
     "space-before-blocks": "error",
     "testing-library/await-async-query": "error",
     "testing-library/no-await-sync-query": "error",
@@ -55,10 +67,16 @@
         "**/*.test.tsx",
         "**/*.spec.js",
         "**/*.spec.jsx",
-        "**/*.spec.tsx"
+        "**/*.spec.tsx",
+        "./src/*.js",
+        "./src/*/*.js"
       ],
       "env": {
         "jest": true
+      },
+      "rules": {
+        "simple-import-sort/imports": "off",
+        "import/order": ["error", { "newlines-between": "always" }]
       }
     }
   ]
